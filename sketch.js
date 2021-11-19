@@ -25,6 +25,7 @@ function setup() {
   can.mousePressed(mp)
   firefighter=createSprite(windowWidth/10-120,windowHeight-105,100,200);
   firefighter.addImage("fighter",firefighterimg)
+	
   firefighter.scale = 0.2
   fireGroup=new Group();
   //drawSprites()
@@ -137,6 +138,7 @@ function spawnFire() {
     fire1.y = Math.round(random(windowHeight-600,windowHeight-400))
     fire1.x = Math.round(random(windowWidth-900,windowWidth-10))
     fire1.addImage(fire1img)
+	     fireGroup.add(fire1)
     fire1.depth=firefighter.depth
     firefighter.depth +=1;
   }
